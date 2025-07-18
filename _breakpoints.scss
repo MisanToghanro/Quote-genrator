@@ -1,0 +1,21 @@
+
+$break-points: (
+"sm": 375px,
+"lg": 1440px
+);
+
+@mixin sm {
+    @media (min-width:map-get($break-points , "sm")) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width:map-get($break-points , "lg")) {
+        @content;
+    }
+}
+
+
+
+    

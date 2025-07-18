@@ -9,7 +9,7 @@ Notif.classList.add("show")
   setTimeout(()=>{
      Notif.classList.remove("show");
   },4000);
-  
+
 })
 
 
@@ -25,6 +25,7 @@ const getAdvice = async () =>{
       }
 
          const data = await response.json();
+          document.getElementById("error").innerText = "";
          document.getElementById("advice-id").innerText = data.slip.id;
          document.getElementById("advice-text").innerText=`"${data.slip.advice}"`
 
